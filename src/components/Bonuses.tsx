@@ -1,31 +1,31 @@
-import { Gift, Sparkles, TrendingUp } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import Bono1 from "@/assets/bono1.jpg";
+import Bono2 from "@/assets/bono2.jpg";
+import Bono3 from "@/assets/bono3.jpg";
 
 const Bonuses = () => {
-  const bonuses = [
-    {
-      icon: Sparkles,
-      title: "Los Secretos de los Sonidos Mágicos",
-      value: "$19",
-      description:
-        "Descubre las frecuencias sonoras y mantras que amplifican tu energía de manifestación. Audio guías exclusivas para potenciar tu ritual diario.",
-    },
-    {
-      icon: Gift,
-      title: "Mi Diario de Manifestación",
-      value: "$15",
-      description:
-        "Un diario digital especialmente diseñado para rastrear tus progresos, registrar tus manifestaciones y mantener tu energía enfocada en tus objetivos.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Números Mágicos para una Vida Abundante",
-      value: "$12",
-      description:
-        "La numerología aplicada a la manifestación. Descubre tus números personales de poder y cómo usarlos para atraer abundancia específica.",
-    },
-  ];
+const bonuses = [
+  {
+    image: Bono1,
+    title: "Los Secretos de los Sonidos Mágicos",
+    value: "$19",
+    description:
+      "Descubre las frecuencias sonoras y mantras que amplifican tu energía de manifestación. Audio guías exclusivas para potenciar tu ritual diario.",
+  },
+  {
+    image: Bono2,
+    title: "Mi Diario de Manifestación",
+    value: "$15",
+    description:
+      "Un diario digital especialmente diseñado para rastrear tus progresos, registrar tus manifestaciones y mantener tu energía enfocada en tus objetivos.",
+  },
+  {
+    image: Bono3,
+    title: "Números Mágicos para una Vida Abundante",
+    value: "$12",
+    description:
+      "La numerología aplicada a la manifestación. Descubre tus números personales de poder y cómo usarlos para atraer abundancia específica.",
+  },
+];
 
   return (
     <section className="py-20 bg-gradient-section">
@@ -52,8 +52,12 @@ const Bonuses = () => {
                   className="border-2 border-primary/20 hover:border-primary hover:shadow-lift transition-all"
                 >
                   <CardHeader>
-                    <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-8 h-8 text-primary-foreground" />
+                    <div className="mx-auto mb-4">
+                      <img
+                        src={bonus.image}
+                        alt={bonus.title}
+                        className="w-full h-48 object-cover rounded-md shadow-md"
+                      />
                     </div>
                     <CardTitle className="text-center">
                       <div className="mb-2">
